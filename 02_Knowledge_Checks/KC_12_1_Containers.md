@@ -173,3 +173,4 @@ Python object used to:
 - MySQL can run inside a Docker container.
 - Python uses `cursor.execute()` to communicate with databases.
 - Containers simplify database deployment and improve portability across environments.
+  
