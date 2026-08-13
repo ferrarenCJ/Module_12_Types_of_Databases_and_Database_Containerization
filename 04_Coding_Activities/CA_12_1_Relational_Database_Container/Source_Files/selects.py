@@ -4,11 +4,14 @@ import uuid
 import sys
 sys.dont_write_bytecode = True
 
-cnx = mysql.connector.connect(user='root', 
-    password='MyNewPass',
+cnx = mysql.connector.connect(
+    user='root',
+    password='RootPassword123',
     host='127.0.0.1',
     database='pluto',
-    auth_plugin='mysql_native_password')
+    port=3306
+    )
+
 
 # create cursor
 cursor = cnx.cursor()
