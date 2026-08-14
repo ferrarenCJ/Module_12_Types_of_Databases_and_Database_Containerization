@@ -5,12 +5,11 @@ import sys
 sys.dont_write_bytecode = True
 
 cnx = mysql.connector.connect(
-    host='localhost', 
-    port=3306,
-    user='mysqluser',
-    password='UserPassword123',
-    auth_plugin='mysql_native_password'
-    )
+    user='root',
+    password='RootPassword123',
+    host='127.0.0.1',
+    port=3300
+)
 
 # create cursor
 cursor = cnx.cursor()
