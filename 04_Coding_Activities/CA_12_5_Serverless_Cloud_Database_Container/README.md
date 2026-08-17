@@ -2,7 +2,7 @@
 
 ## Objective
 
-The purpose of this activity is to create a serverless cloud database using Google Firebase, connect to it using Python, and write data to a Firebase Realtime Database using the Firebase Admin SDK.
+Create and configure a Firebase Realtime Database, connect to it using Python, and write data to a Firebase serverless cloud database using the Firebase Admin SDK.
 
 ---
 
@@ -22,86 +22,59 @@ The purpose of this activity is to create a serverless cloud database using Goog
 
 ---
 
-## Project Information
-
-### Firebase Project
-
-```text
-Activity12-5
-```
-
-### Database Type
-
-```text
-Firebase Realtime Database
-```
-
-### Architecture
-
-```text
-Python Application
-        ↓
-Firebase Admin SDK
-        ↓
-Firebase API
-        ↓
-Realtime Database
-```
-
----
-
 ## Folder Structure
 
 ```text
-CA_12_5_Serverless_Cloud_Database
+CA_12_5_Serverless_Cloud_Database_Container
 │
-├── fire.py
-├── serviceAccountKey.json
-├── README.md
-└── Screenshots
-```
-
-> Note: `serviceAccountKey.json` should never be committed to GitHub.
-
----
-
-## Firebase Setup
-
-### Create Project
-
-Navigate to:
-
-```text
-https://console.firebase.google.com
-```
-
-Create a project named:
-
-```text
-Activity12-5
+├── Documentation
+│   ├── Activity 12.5_Modify a Serverless Cloud Database.docx
+│   └── Supporting screenshots and submission materials
+│
+├── Solution_Files
+│   └── fire.py
+│
+├── Source_Files
+│   ├── fire.py
+│   └── README.md
+│
+└── README.md
 ```
 
 ---
 
-## Generate Service Account Credentials
+## Folder Descriptions
 
-Navigate to:
+### Documentation
+
+Contains the final assignment submission and supporting deliverables.
+
+Examples:
+
+- Word document submitted to Canvas
+- Assignment screenshots
+- Supporting documentation
+
+---
+
+### Source_Files
+
+Contains the original working files used during development.
+
+Files:
 
 ```text
-Project Settings
-    ↓
-Service Accounts
+fire.py
+README.md
 ```
 
-Generate a new private key.
+---
 
-Save the downloaded file as:
+### Solution_Files
 
-```text
-serviceAccountKey.json
-```
+Contains the finalized solution files for the activity.
 
-Place it in the same folder as:
+Files:
 
 ```text
 fire.py
@@ -109,13 +82,72 @@ fire.py
 
 ---
 
-## Create Realtime Database
+## Firebase Project
 
-Navigate to:
+Project Name:
 
 ```text
-Build
-    ↓
-Realtime Database
+Activity12-5
 ```
 
+Database Type:
+
+```text
+Firebase Realtime Database
+```
+
+---
+
+## Python Package Installation
+
+Install the Firebase Admin SDK:
+
+```bash
+pip install firebase-admin
+```
+
+Verify installation:
+
+```bash
+pip show firebase-admin
+```
+
+---
+
+## Source Code Overview
+
+The Python script performs the following tasks:
+
+1. Authenticates with Firebase using a service account.
+2. Connects to a Firebase Realtime Database.
+3. Writes custom JSON data to the database.
+4. Verifies successful communication with Firebase.
+
+---
+
+## Security Note
+
+The Firebase service account key should never be committed to GitHub.
+
+Add the following to `.gitignore`:
+
+```gitignore
+serviceAccountKey.json
+*-firebase-adminsdk-*.json
+```
+
+---
+
+## Key Takeaways
+
+- Firebase is a serverless cloud database platform.
+- Firebase Realtime Database stores information as JSON.
+- Python applications can interact with Firebase using the Firebase Admin SDK.
+- Serverless services remove the need to manage servers and infrastructure.
+- Google automatically handles scaling, availability, and maintenance.
+
+---
+
+## Conclusion
+
+This activity demonstrated how to create a Firebase project, configure a Realtime Database
