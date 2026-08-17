@@ -8,7 +8,7 @@ cred = credentials.Certificate('serviceAccountKey.json')
 
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://demond-18d8e-default-rtdb.firebaseio.com/'
+    'databaseURL': 'https://activity12-5-15e92-default-rtdb.firebaseio.com/'
 })
 
 # save data
