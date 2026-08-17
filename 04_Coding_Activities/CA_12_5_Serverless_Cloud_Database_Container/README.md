@@ -2,7 +2,7 @@
 
 ## Objective
 
-Create and configure a Firebase Realtime Database, connect to it using Python, and write data to a Firebase serverless cloud database using the Firebase Admin SDK.
+The purpose of this activity is to create a serverless cloud database using Google Firebase, connect to it using Python, and write data to a Firebase Realtime Database using the Firebase Admin SDK.
 
 ---
 
@@ -29,14 +29,21 @@ CA_12_5_Serverless_Cloud_Database_Container
 │
 ├── Documentation
 │   ├── Activity 12.5_Modify a Serverless Cloud Database.docx
-│   └── Supporting screenshots and submission materials
-│
-├── Solution_Files
-│   └── fire.py
+│   └── Screenshots and supporting documentation
 │
 ├── Source_Files
 │   ├── fire.py
-│   └── README.md
+│   ├── README.md
+│   └── Screenshots
+│       ├── Firebase_Project.png
+│       ├── Service_Accounts.png
+│       ├── Realtime_Database.png
+│       ├── UPDATE_URL.png
+│       ├── Fire_Executed_Successfully.png
+│       └── ...
+│
+├── Solution_Files
+│   └── fire.py
 │
 └── README.md
 ```
@@ -47,38 +54,15 @@ CA_12_5_Serverless_Cloud_Database_Container
 
 ### Documentation
 
-Contains the final assignment submission and supporting deliverables.
-
-Examples:
-
-- Word document submitted to Canvas
-- Assignment screenshots
-- Supporting documentation
-
----
+Contains the final assignment submission and supporting screenshots used to satisfy the activity requirements.
 
 ### Source_Files
 
-Contains the original working files used during development.
-
-Files:
-
-```text
-fire.py
-README.md
-```
-
----
+Contains development files, screenshots, notes, and source code used during the activity.
 
 ### Solution_Files
 
-Contains the finalized solution files for the activity.
-
-Files:
-
-```text
-fire.py
-```
+Contains the finalized version of the solution code used for the assignment.
 
 ---
 
@@ -98,56 +82,19 @@ Firebase Realtime Database
 
 ---
 
-## Python Package Installation
+## Firebase Setup
 
-Install the Firebase Admin SDK:
+### Create a Firebase Project
 
-```bash
-pip install firebase-admin
+Navigate to:
+
+```text
+https://console.firebase.google.com
 ```
 
-Verify installation:
+Create a new project named:
 
-```bash
-pip show firebase-admin
+```text
+Activity12-5
 ```
 
----
-
-## Source Code Overview
-
-The Python script performs the following tasks:
-
-1. Authenticates with Firebase using a service account.
-2. Connects to a Firebase Realtime Database.
-3. Writes custom JSON data to the database.
-4. Verifies successful communication with Firebase.
-
----
-
-## Security Note
-
-The Firebase service account key should never be committed to GitHub.
-
-Add the following to `.gitignore`:
-
-```gitignore
-serviceAccountKey.json
-*-firebase-adminsdk-*.json
-```
-
----
-
-## Key Takeaways
-
-- Firebase is a serverless cloud database platform.
-- Firebase Realtime Database stores information as JSON.
-- Python applications can interact with Firebase using the Firebase Admin SDK.
-- Serverless services remove the need to manage servers and infrastructure.
-- Google automatically handles scaling, availability, and maintenance.
-
----
-
-## Conclusion
-
-This activity demonstrated how to create a Firebase project, configure a Realtime Database
